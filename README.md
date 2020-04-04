@@ -1,6 +1,6 @@
 # Cloud DevOps Engineering
 
-Repository for material for the Udacity nano degree of  Cloud DevOps Engineering.
+Repository for material for the Udacity nano degree of Cloud DevOps Engineering.
 
 ## CloudFormation
 
