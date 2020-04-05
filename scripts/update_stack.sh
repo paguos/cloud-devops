@@ -1,6 +1,6 @@
 export CNF_STACK_NAME="udacity-$CNF_STACK"
-export CNF_TEMPLATE="cnf/$CNF_STACK.yml"
-export CNF_PAREMETERS="cnf/$CNF_STACK-parameters.json"
+export CNF_TEMPLATE="cnf/stacks/$CNF_STACK.yml"
+export CNF_PAREMETERS="cnf/configs/$CNF_STACK.json"
 
 echo "Updating $CNF_STACK stack ..."
 aws cloudformation update-stack \

@@ -1,6 +1,6 @@
 export CNF_STACK_NAME="udacity-$CNF_STACK"
 export CNF_TEMPLATE="cnf/stacks/$CNF_STACK.yml"
-export CNF_PAREMETERS="cnf/configs/$CNF_STACK-parameters.json"
+export CNF_PAREMETERS="cnf/configs/$CNF_STACK.json"
 
 echo "Create $CNF_STACK stack ..."
 aws cloudformation create-stack \
