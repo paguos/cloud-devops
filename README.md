@@ -19,7 +19,7 @@ make create CNF_STACK=network
 
 ### File Structure
 
-Each stack needs the following files:
+Each project needs the following files:
 
-- **Templates:** stored in the `cnf/stacks` directory.
-- **Parameters:** stored in the `cnf/configs` directory.
+- **Templates:** stored in the `cnf/<project-name>/stacks` directory.
+- **Parameters:** stored in the `cnf/<project-name>/configs` directory.
