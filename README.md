@@ -17,9 +17,24 @@ The commands support the `CNF_STACK`flag e.g.:
 make create CNF_STACK=network
 ```
 
-### File Structure
+## Udagram Setup
 
-Each project needs the following files:
+- Deploy the `iam` stack with the following command:
 
-- **Templates:** stored in the `cnf/<project-name>/stacks` directory.
-- **Parameters:** stored in the `cnf/<project-name>/configs` directory.
+```sh
+make CNF_STACK=iam create
+```
+
+- Deploy the `network` stack with the following command:
+
+```sh
+make CNF_STACK=network create
+```
+
+- When both stacks `iam` and `network` have the status `CREATE_COMPLETE`, deploy the `servers` stack:
+
+```sh
+make CNF_STACK=servers create
+```
+
+An example of this deployment can be found [here](http://udagr-webap-lmei85qbo2kf-430263386.us-west-2.elb.amazonaws.com/).
