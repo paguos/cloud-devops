@@ -1,4 +1,4 @@
-export CNF_STACK_NAME="udacity-$CNF_STACK"
+export CNF_STACK_NAME="$PROJECT-$CNF_STACK"
 export CNF_TEMPLATE="cnf/$PROJECT/stacks/$CNF_STACK.yml"
 export CNF_PAREMETERS="cnf/$PROJECT/configs/$CNF_STACK.json"
 
