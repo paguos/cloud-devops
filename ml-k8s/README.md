@@ -1,4 +1,6 @@
-<include a CircleCI status badge, here>
+[![paguos](https://circleci.com/gh/paguos/cloud-devops.svg?style=svg)](https://circleci.com/gh/paguos/cloud-devops)
+
+# ML-K8S
 
 ## Project Overview
 
