@@ -24,7 +24,6 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            cd ml-k8s
             python3 -m venv venv
             . venv/bin/activate
             make install
@@ -40,6 +39,5 @@ jobs:
       - run:
           name: run lint
           command: |
-            cd ml-k8s
             . venv/bin/activate
             make lint
