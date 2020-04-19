@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml-k8s-service
+spec:
+  selector:
+    app: udacity-ml-k8s
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
