@@ -1,0 +1,74 @@
+Sending build context to Docker daemon  749.6kB
+Step 1/10 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/10 : WORKDIR /ml-k8s
+ ---> Using cache
+ ---> b4df513b03ad
+Step 3/10 : COPY model_data model_data
+ ---> Using cache
+ ---> ad4b52a1dd37
+Step 4/10 : COPY output_txt_files output_txt_files
+ ---> Using cache
+ ---> 1cc2ea8a0d40
+Step 5/10 : COPY requirements.txt requirements.txt
+ ---> Using cache
+ ---> 27a93a944afd
+Step 6/10 : COPY app.py app.py
+ ---> Using cache
+ ---> b52ff7f0d015
+Step 7/10 : RUN pip install --upgrade pip
+ ---> Using cache
+ ---> a1b3951ddbaa
+Step 8/10 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> d675769dd500
+Step 9/10 : EXPOSE 80
+ ---> Using cache
+ ---> 76ff89805e28
+Step 10/10 : CMD [ "python", "app.py" ]
+ ---> Using cache
+ ---> 88eda53b9450
+Successfully built 88eda53b9450
+Successfully tagged ml-k8s:latest
+REPOSITORY                                                              TAG                            IMAGE ID            CREATED             SIZE
+paguos/udacity-ml-k8s                                                   v0.1.0                         88eda53b9450        10 minutes ago      1.24GB
+ml-k8s                                                                  latest                         88eda53b9450        10 minutes ago      1.24GB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 283-460-292
+[2020-04-19 13:26:46,638] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-04-19 13:26:46,655] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-04-19 13:26:46,666] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-04-19 13:26:46,671] INFO in app: Prediction: [20.35373177134412]
+172.17.0.1 - - [19/Apr/2020 13:26:46] "POST /predict HTTP/1.1" 200 -
+[2020-04-19 13:27:04,844] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-04-19 13:27:04,860] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-04-19 13:27:04,874] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-04-19 13:27:04,878] INFO in app: Prediction: [20.35373177134412]
+172.17.0.1 - - [19/Apr/2020 13:27:04] "POST /predict HTTP/1.1" 200 -
+[2020-04-19 13:27:06,053] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-04-19 13:27:06,070] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-04-19 13:27:06,084] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-04-19 13:27:06,095] INFO in app: Prediction: [20.35373177134412]
+172.17.0.1 - - [19/Apr/2020 13:27:06] "POST /predict HTTP/1.1" 200 -
